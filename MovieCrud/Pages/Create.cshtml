@@ -1,0 +1,20 @@
+﻿@page
+@model MovieCrud.Pages.CreateModel
+@{
+    ViewData["Title"] = "Create a Movie";
+}
+<h1 class="bg-info text-white">Create a Movie</h1>
+<div asp-validation-summary="All" class="text-danger"></div>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.movie.Name"></label>
+        <input type="text" asp-for="@Model.movie.Name" class="form-control" />
+        <span asp-validation-for="@Model.movie.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.movie.Actors"></label>
+        <input type="text" asp-for="@Model.movie.Actors" class="form-control" />
+        <span asp-validation-for="@Model.movie.Actors" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
